@@ -1,19 +1,12 @@
 // DEPENDENCIES
 const express = require('express')
+const { Sequelize } = require("sequelize");
 const app = express()
 
 // CONFIGURATION / MIDDLEWARE
 require('dotenv').config()
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
-
-// SEQUELIZE CONNECTION
-const sequelize = new Sequelize({
-    storage: process.env.PG_URI,
-    dialect: 'postgres',
-    username: 'postgres',
-    password: 'my_password'
-})
 
 // ROOT
 app.get('/', (req, res) => {
