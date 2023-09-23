@@ -22,15 +22,19 @@ Event.init(
     },
     name: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     date: {
       type: DataTypes.DATE,
+      allowNull: false,
     },
     start_time: {
       type: DataTypes.TIME,
+      allowNull: false,
     },
     end_time: {
       type: DataTypes.TIME,
+      allowNull: false,
     },
   },
   {
