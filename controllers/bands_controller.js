@@ -18,8 +18,6 @@ bands.get('/', async (req, res) => {
     }
 })
 
-
-
 // FIND A BAND
 bands.get('/:id', async (req, res) => {
     try {
